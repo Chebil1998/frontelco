@@ -8,6 +8,8 @@ import Commerce from './Commerce';
 import OnLineMarketingDashboard from '../../../Dashboards/OnLineMarketing/index';
 import AppDashboard from '../../../Dashboards/App/index';
 import BookingDashboard from '../../../Dashboards/Booking/index';
+import RiskManagementDashboard from '../../../Dashboards/RiskManagement/index';
+
 import FitnessDashboard from '../../../Dashboards/Fitness/index';
 import UI from './UI';
 import Mail from '../../../Mail/index';
@@ -33,6 +35,7 @@ export default () => (
       <Route path="/connect_wallet" component={ConnectWallet} />
       <Route exact path="/app_dashboard" component={AppDashboard} />
       <Route path="/booking_dashboard" component={BookingDashboard} />
+      <Route path="/risk_management_dashboard" component={RiskManagementDashboard} />
       <Route exact path="/finance_dashboard" component={FinanceDashboard} />
       <Route path="/fitness_dashboard" component={FitnessDashboard} />
       <Route path="/ui" component={UI} />
