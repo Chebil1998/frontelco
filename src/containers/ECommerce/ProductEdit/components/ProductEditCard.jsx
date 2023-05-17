@@ -11,7 +11,7 @@ const PaymentCard = () => (
     <Card>
       <CardBody>
         <CardTitleWrap>
-          <CardTitle>Main Information</CardTitle>
+          <CardTitle>Requirement Informations</CardTitle>
         </CardTitleWrap>
         <ProductEditForm onSubmit={showResults} />
       </CardBody>

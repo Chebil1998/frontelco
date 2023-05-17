@@ -22,14 +22,14 @@ const ProductsListTable = ({ productListTableData }) => {
   };
 
   return (
-    <Col md={12} lg={12}>
+    <Col md={13} lg={12}>
       <Card>
         <CardBody>
           <CardTitleWrap>
-            <CardTitle>Products List</CardTitle>
+            <CardTitle>Requirements List</CardTitle>
             <ProductListToolbar>
               <ProductListAddButton variant="primary" as={Link} to="/e-commerce/product_edit">
-                Add new product
+                Add new Requirement
               </ProductListAddButton>
             </ProductListToolbar>
           </CardTitleWrap>

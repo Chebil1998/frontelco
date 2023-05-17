@@ -25,6 +25,7 @@ import DefaultPages from './DefaultPages';
 import Documentation from './Documentation';
 import ConnectWallet from '../../../Dashboards/ConnectWallet';
 import FinanceDashboard from '../../../Dashboards/Finance';
+import Security from './Security';
 
 export default () => (
   <div>
@@ -48,6 +49,8 @@ export default () => (
       <Route path="/maps" component={Maps} />
       <Route path="/account" component={Account} />
       <Route path="/e-commerce" component={ECommerce} />
+      <Route path="/security" component={Security} />
+
       <Route path="/default_pages" component={DefaultPages} />
       <Route path="/documentation" component={Documentation} />
     </ContainerWrap>

@@ -5,10 +5,9 @@ import ProductEditCard from './components/ProductEditCard';
 const ProductEdit = () => (
   <Container>
     <Row>
-      <Col md={12}>
-        <h3 className="page-title">Product Edit</h3>
-        <h3 className="page-subhead subhead">Use this elements, if you want to show some hints or additional
-          information
+      <Col md={16}>
+        <h3 className="page-title">Requirements Add/edit</h3>
+        <h3 className="page-subhead subhead">Use this elements, if you want to Add or Edit an requirement
         </h3>
       </Col>
     </Row>

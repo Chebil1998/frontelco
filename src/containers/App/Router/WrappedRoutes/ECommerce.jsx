@@ -16,6 +16,6 @@ export default () => (
     <Route path="/e-commerce/payment" component={Payment} />
     <Route path="/e-commerce/product_edit" component={ProductEdit} />
     <Route path="/e-commerce/product_page" component={ProductPage} />
-    <Route path="/e-commerce/products_list" component={ProductsList} />
+    <Route path="/e-commerce/requirements_list" component={ProductsList} />
   </Switch>
 );

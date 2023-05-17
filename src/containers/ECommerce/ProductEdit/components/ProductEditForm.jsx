@@ -25,167 +25,82 @@ const ProductEditForm = ({ onSubmit }) => (
   <Form onSubmit={onSubmit}>
     {({ handleSubmit, form }) => (
       <FormContainer className="product-edit" onSubmit={handleSubmit}>
-        <FormHalfContainer>
-          <FormGroup>
-            <FormGroupLabel>Product Name</FormGroupLabel>
+
+        <FormGroup>
+          <FormGroupLabel>Requirement</FormGroupLabel>
+          <FormGroupField>
+            <Field
+              name="Requirement"
+              component="input"
+              type="text"
+            />
+          </FormGroupField>
+        </FormGroup>
+        <FormGroupIdCategory>
+          <FormGroupId>
+            <FormGroupLabel>Code of Section</FormGroupLabel>
             <FormGroupField>
               <Field
-                name="name"
+                name="Section"
                 component="input"
                 type="text"
               />
             </FormGroupField>
-          </FormGroup>
-          <FormGroupIdCategory>
-            <FormGroupId>
-              <FormGroupLabel>ID</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="id"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroupId>
-            <FormGroup>
-              <FormGroupLabel>Category</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="category"
-                  component={renderSelectField}
-                  options={[
-                    { value: 'one', label: 'One' },
-                    { value: 'two', label: 'Two' },
-                  ]}
-                />
-              </FormGroupField>
-            </FormGroup>
-          </FormGroupIdCategory>
+
+          </FormGroupId>
           <FormGroup>
-            <FormGroupLabel>
-              Short description <span dir="ltr">(300 characters max)</span>
-            </FormGroupLabel>
+            <FormGroupLabel>Security Framework</FormGroupLabel>
             <FormGroupField>
               <Field
-                name="short_description"
-                component="input"
-                type="text"
+                name="sfw"
+                component={renderSelectField}
+                options={[
+                  { value: 'ISO27001', label: 'ISO27001' },
+                  { value: 'TISAX', label: 'TISAX' },
+                ]}
               />
             </FormGroupField>
+
           </FormGroup>
           <FormGroup>
-            <FormGroupLabel>Full description</FormGroupLabel>
+            <FormGroupLabel>Status</FormGroupLabel>
             <FormGroupField>
               <Field
-                name="full_description"
-                component="textarea"
-                type="text"
+                name="Status"
+                component={renderSelectField}
+                options={[
+                  { value: 'Defined', label: 'Defined' },
+                  { value: 'Nonexistent', label: 'Nonexistent' },
+                ]}
               />
             </FormGroupField>
+
           </FormGroup>
-          <CardTitleWrap>
-            <CardTitle>Pricing</CardTitle>
-          </CardTitleWrap>
-          <FormGroupPriceDiscount>
-            <FormGroupPrice>
-              <FormGroupLabel>Price</FormGroupLabel>
-              <FormGroupField>
-                <FormGroupIcon>
-                  <CurrencyUsdIcon />
-                </FormGroupIcon>
-                <Field
-                  name="price"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroupPrice>
-            <FormGroup>
-              <FormGroupLabel>Discount</FormGroupLabel>
-              <FormGroupField>
-                <FormGroupIcon>
-                  <TagIcon />
-                </FormGroupIcon>
-                <Field
-                  name="discount"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroup>
-          </FormGroupPriceDiscount>
-          <CardTitleWrap>
-            <CardTitle>General information</CardTitle>
-          </CardTitleWrap>
-          <FormContainer horizontal as="div">
-            <FormGroup>
-              <FormGroupLabel>Brand Name</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="brand"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroup>
-            <FormGroup>
-              <FormGroupLabel>Category</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="general_category"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroup>
-            <FormGroup>
-              <FormGroupLabel>Delivery Condition</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="delivery"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroup>
-            <FormGroup>
-              <FormGroupLabel>Weight</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="weight"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroup>
-            <FormGroup>
-              <FormGroupLabel>Size</FormGroupLabel>
-              <FormGroupField>
-                <Field
-                  name="size"
-                  component="input"
-                  type="text"
-                />
-              </FormGroupField>
-            </FormGroup>
-          </FormContainer>
-        </FormHalfContainer>
-        <FormHalfContainer>
-          <FormGroup>
-            <FormGroupLabel>Upload photo</FormGroupLabel>
-            <FormGroupField>
-              <Field
-                name="files"
-                component={renderDropZoneMultipleField}
-              />
-            </FormGroupField>
-          </FormGroup>
-        </FormHalfContainer>
-        <FormButtonToolbar>
-          <Button variant="primary" type="submit">Save</Button>
-          <Button variant="secondary" type="button" onClick={form.reset}>Cancel</Button>
-        </FormButtonToolbar>
+          
+        </FormGroupIdCategory>
+        <FormGroup>
+          <FormGroupLabel>
+            Short Note <span dir="ltr">(300 characters max)</span>
+          </FormGroupLabel>
+          <FormGroupField>
+            <Field
+              name="short_description"
+              component="input"
+              type="text"
+            />
+          </FormGroupField>
+        </FormGroup>
+
+
+        <FormGroup>
+          <FormButtonToolbar>
+            <Button variant="primary" type="submit">Save</Button>
+            <Button variant="secondary" type="button" onClick={form.reset}>Cancel</Button>
+          </FormButtonToolbar>
+        </FormGroup>
       </FormContainer>
+
+
     )}
   </Form>
 );
